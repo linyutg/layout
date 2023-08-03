@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sidebar</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      .parent {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+      }
+      .parent > * {
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 30ch;
+        border: 1px solid;
+        padding: 1rem;
+      }
+
+      .sidebar {
+        display: flex;
+        flex-wrap: wrap;
+        height: 400px;
+        gap: 1rem;
+      }
+
+      .left {
+        /* flex-basis: 20rem; */
+        flex-grow: 1;
+        background-color: lightpink;
+      }
+      .right {
+        flex-grow: 99999;
+        min-inline-size: 67%;
+        background-color: lightblue;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>flex wrap</h2>
+    <div class="parent">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <h2>sidebar</h2>
+    <div class="sidebar">
+      <div class="left">this is the left content</div>
+      <div class="right">this is the right content</div>
+    </div>
+  </body>
+</html>

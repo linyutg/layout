@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>switcher</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+      .grid > * {
+        flex: 1 1 20rem;
+        border: 1px solid;
+        padding: 1rem;
+      }
+
+      .switcher {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+      .switcher > * {
+        flex-grow: 1;
+        /* flex-basic < 0 (100 % > 30rem) horizontal */
+        /* flex-basic > 0 (100% < 30rem) vertical */
+        flex-basis: calc((30rem - 100%) * 999);
+        border: 1px solid;
+        padding: 1rem;
+      }
+
+      .switcher > :nth-last-child(n + 5),
+      .switcher > :nth-last-child(n + 5) ~ * {
+        /* ↓ Switch to a vertical configuration if
+  there are more than 4 child elements */
+        flex-basis: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>flex grid</h2>
+    <div class="grid">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <h2>switcher</h2>
+    <div class="switcher">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </body>
+</html>

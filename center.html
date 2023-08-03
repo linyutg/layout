@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>center</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .center {
+        box-sizing: content-box;
+        max-inline-size: 800px;
+        margin-inline: auto;
+        padding-inline: 1rem;
+        border: 1px solid;
+        padding: 1rem;
+      }
+
+      .center-flex {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1px solid;
+        padding: 1rem;
+      }
+
+      .box {
+        padding: 1rem;
+        border: 1px solid;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="center"><div class="box">this is the content</div></div>
+    <hr />
+    <div class="center-flex"><div class="box">this is the content</div></div>
+  </body>
+</html>

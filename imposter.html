@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>imposter</title>
+    <style>
+      .imposter {
+        position: absolute;
+        inset-block-start: 50%;
+        inset-inline-start: 50%;
+        transform: translate(-50%, -50%);
+
+        background-color: aliceblue;
+
+        /* ↓ Restrict the height and width, including optional
+  spacing/margin between the element and positioning container */
+        max-inline-size: calc(100% - 2rem);
+        max-block-size: calc(100% - 2rem);
+
+        /* ↓ Provide scrollbars so content is not obscured */
+        overflow: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="position: relative; height: 400px; background-color: bisque">
+      <p>Static content</p>
+      <div class="imposter">
+        <p>Superimposed content</p>
+      </div>
+    </div>
+  </body>
+</html>
